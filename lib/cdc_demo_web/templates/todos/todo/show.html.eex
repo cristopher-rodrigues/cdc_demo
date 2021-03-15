@@ -1,0 +1,18 @@
+<h1>Show Todo</h1>
+
+<ul>
+
+  <li>
+    <strong>Todo:</strong>
+    <%= @todo.todo %>
+  </li>
+
+  <li>
+    <strong>Marked as done:</strong>
+    <%= @todo.marked_as_done %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.todos_todo_path(@conn, :edit, @todo) %></span>
+<span><%= link "Back", to: Routes.todos_todo_path(@conn, :index) %></span>
